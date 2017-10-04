@@ -38,10 +38,13 @@ public class RentACat {
      * @return boolean false if cat was rented out, true otherwise
      */
 
-    
-    public boolean rentCat(Cat c) {
-	// TODO
-	return false;
+   public boolean rentCat(Cat c) {
+	if (catAvailable(c.getId(), _cats)){
+		c.rentCat();
+		return true;
+	}
+		
+	else return false;
     }
 
 
