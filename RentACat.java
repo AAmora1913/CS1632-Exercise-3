@@ -18,8 +18,8 @@ public class RentACat {
     
     public boolean returnCat(Cat c) {
 	// TODO
-		if(checkAvailability(c.getId(), _cats) -- false){
-			c.returnCat;
+		if(checkAvailability(c.getId(), _cats) == false){
+			c.returnCat();
 			return true;
 		}
 		else{
