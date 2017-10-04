@@ -1,8 +1,7 @@
+import static org.junit.Assert.*;
+import org.junit.*;
+
 public class catTest{
-
-	public static void main(String[] args) {
-
-
-	}
+	
 
 }
