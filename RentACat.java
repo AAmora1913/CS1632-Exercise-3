@@ -62,8 +62,13 @@ public class RentACat {
      */
     
     public String listCats(ArrayList<Cat> catList) {
-	// TODO
-	return "WRITE CODE FOR THIS";
+	String list = "";
+		
+	for(int i = 0; i < catList.size(); i++){
+		if(catList.get(i).getRented()) list += catList.get(i).toString(); 		
+	}		
+	
+    return list;
     }
 
     /**
