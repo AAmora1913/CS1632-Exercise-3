@@ -65,7 +65,7 @@ public class RentACat {
 	String list = "";
 		
 	for(int i = 0; i < catList.size(); i++){
-		if(catList.get(i).getRented()) list += catList.get(i).toString(); 		
+		if(catList.get(i).getRented()) list += catList.get(i).toString() += "\n"; 		
 	}		
 	
     return list;
