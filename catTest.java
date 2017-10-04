@@ -3,6 +3,6 @@ import org.junit.*;
 
 public class catTest{
 
-//Github shell push test
+//Github command line test
 
 }
