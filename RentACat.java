@@ -78,6 +78,18 @@ public class RentACat {
     
     public boolean catExists(int id, ArrayList<Cat> catList) {
 	// TODO
+	    if (catList == null || catList.size() == 0){
+			return false;
+		}
+		else{
+			for (int i = 0; i < catList.size(); i++){
+				Cat c = catList.get(i);
+				if(c.getId() == id){
+					return true;
+				}
+			}
+		}
+	
 	return false;
     }
 
