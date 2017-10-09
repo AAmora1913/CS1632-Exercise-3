@@ -17,8 +17,7 @@ public class RentACat {
      */
     
     public boolean returnCat(Cat c) {
-	// TODO
-		if(checkAvailability(c.getId(), _cats) == false){
+		if(c.getRented() == true){
 			c.returnCat();
 			return true;
 		}
@@ -38,13 +37,10 @@ public class RentACat {
      * @return boolean false if cat was rented out, true otherwise
      */
 
-   public boolean rentCat(Cat c) {
-	if (catAvailable(c.getId(), _cats)){
-		c.rentCat();
-		return true;
-	}
-		
-	else return false;
+    
+    public boolean rentCat(Cat c) {
+	// TODO
+	return false;
     }
 
 
@@ -62,13 +58,8 @@ public class RentACat {
      */
     
     public String listCats(ArrayList<Cat> catList) {
-	String list = "";
-		
-	for(int i = 0; i < catList.size(); i++){
-		if(catList.get(i).getRented()) list += catList.get(i).toString() += "\n"; 		
-	}		
-	
-    return list;
+	// TODO
+	return "WRITE CODE FOR THIS";
     }
 
     /**
@@ -83,7 +74,7 @@ public class RentACat {
     
     public boolean catExists(int id, ArrayList<Cat> catList) {
 	// TODO
-	    if (catList == null || catList.size() == 0){
+		if (catList == null || catList.size() == 0){
 			return false;
 		}
 		else{
@@ -94,9 +85,8 @@ public class RentACat {
 				}
 			}
 		}
-	
-	return false;
-    }
+			return false;
+	}
 
     /**
      * Given a list of cats and id, return true if a cat exists in the list
