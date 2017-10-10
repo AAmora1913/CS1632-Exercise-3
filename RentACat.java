@@ -39,12 +39,12 @@ public class RentACat {
 
     
     public boolean rentCat(Cat c) {
-	if (catAvailable(c.getId(), _cats)){
- +		c.rentCat();
- +		return true;
- +	}
- +		
- +	else return false;
+		if (!c.getRented()){
+			c.rentCat();
+			return true;
+		}
+			
+		else return false;
     }
 
 
@@ -64,12 +64,12 @@ public class RentACat {
     public String listCats(ArrayList<Cat> catList) {
 	// TODO
 		String list = "";
- +		
- +	for(int i = 0; i < catList.size(); i++){
- +		if(catList.get(i).getRented()) list += catList.get(i).toString(); 		
- +	}		
- +	
- +    return list;
+			
+		for(int i = 0; i < catList.size(); i++){
+			if(!catList.get(i).getRented()) list += (catList.get(i).toString() + "\n"); 		
+		}		
+		
+		return list;
     }
 
     /**
